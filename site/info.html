@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата и доставка — Магазин Знание</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           БАЗОВЫЕ СТИЛИ
+        ========================================= */
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        a { color: #bd2fff; text-decoration: none; transition: color 0.3s; }
+        a:hover { text-decoration: underline; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* =========================================
+           ШАПКА (BEM)
+        ========================================= */
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header__logo {
+            border-radius: 50%;
+            border: 2px solid #bd2fff;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .nav__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nav__link {
+            font-weight: bold;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .nav__link:hover, 
+        .nav__link--active {
+            color: #fff;
+            background-color: #bd2fff;
+            border-color: #bd2fff;
+            text-decoration: none;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 5px;
+        }
+
+        .search-form__input {
+            padding: 8px 12px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            outline: none;
+        }
+
+        .search-form__input:focus {
+            border-color: #bd2fff;
+        }
+
+        .search-form__btn {
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-form__btn:hover {
+            background-color: #bd2fff;
+        }
+
+        /* =========================================
+           ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ
+        ========================================= */
+        .info-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #1a1a1a;
+            border-left: 5px solid #bd2fff;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .payment-section {
+            margin-bottom: 50px;
+            padding: 20px;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            background-color: #fafafa;
+            border-radius: 8px;
+        }
+
+        .payment-methods-list {
+            margin-top: 20px;
+        }
+
+        .payment-item {
+            display: inline-block;
+            vertical-align: top;
+            width: 280px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .payment-item img {
+            width: 50px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .secure-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #00b3ff;
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f0f0f0;
+            color: #333;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1e6ff;
+        }
+
+        /* =========================================
+           ПОДВАЛ
+        ========================================= */
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-top: 4px solid #bd2fff;
+            text-align: center;
+            border-radius: 10px;
+        }
+        footer a { color: #bd2fff; }
+        footer a:hover { color: #fff; }
+
+        /* =========================================
+           МЕДИАЗАПРОСЫ ДЛЯ АДАПТИВНОСТИ ШАПКИ
+        ========================================= */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+            .nav__list {
+                justify-content: center;
+            }
+            .payment-item {
+                width: 100%; /* Карточки оплаты на мобильных на всю ширину */
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .search-form { width: 100%; }
+            .search-form__input { width: 100%; }
+            .info-container { padding: 20px; } /* Уменьшаем отступы контента на телефонах */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Обновленная шапка -->
+        <header class="header">
+            <img class="header__logo" src="https://i.imgur.com/zZQtinP.png" alt="Логотип">
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="index.html">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Корзина</a></li>
+                    <!-- Здесь добавлен класс nav__link--active -->
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="info.html">Оплата и доставка</a></li>
+                </ul>
+            </nav>
+
+            <form class="search-form" action="search.html" method="get">
+                <input class="search-form__input" type="search" placeholder="Поиск..." name="s">
+                <button class="search-form__btn" type="submit">Найти</button>
+            </form>
+        </header>
+
+        <main class="info-container">
+            
+            <section class="payment-section">
+                <h2>Способы оплаты</h2>
+                <p>Мы предлагаем несколько удобных и безопасных способов оплаты вашего заказа:</p>
+                
+                <div class="payment-methods-list">
+                    <div class="payment-item">
+                        <span class="secure-badge">Safe</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Visa_Inc._logo_%282005%E2%80%932014%29.svg" alt="Visa">
+                        <p><strong>Банковские карты</strong><br>Принимаем Visa, Mastercard и МИР онлайн на сайте без комиссии.</p>
+                    </div>
+
+                    <div class="payment-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" alt="PayPal">
+                        <p><strong>Электронные деньги</strong><br>Быстрая оплата через систему PayPal или ЮMoney.</p>
+                    </div>
+
+                    <div class="payment-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1554/1554401.png" alt="Cash">
+                        <p><strong>При получении</strong><br>Оплата наличными или картой курьеру при доставке заказа.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="shipping-section">
+                <h2>Стоимость доставки</h2>
+                <p>Мы доставляем книги по всей стране. Выберите наиболее подходящий вам вариант:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Регион / Способ доставки</th>
+                            <th>Срок доставки</th>
+                            <th>Стоимость</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Курьером по Москве</td>
+                            <td>1-2 дня</td>
+                            <td>300 руб. (Бесплатно от 2000 руб.)</td>
+                        </tr>
+                        <tr>
+                            <td>Пункты выдачи (СДЭК/Boxberry)</td>
+                            <td>2-4 дня</td>
+                            <td>150 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Почта России</td>
+                            <td>5-14 дней</td>
+                            <td>450 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Самовывоз из магазина</td>
+                            <td>Сегодня</td>
+                            <td>Бесплатно</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer>
+            <a style="font-weight: bold; color: #fff; margin-top: 0;" href="tel:88882224224">8 888 222-42-24</a>
+            <p>&copy; 2026, Знание. Все права защищены</p>
+            <p style="margin-bottom: 0;">
+                Мы в соцсетях: 
+                <a href="#">VK</a> | <a href="#">Telegram</a> | <a href="#">Instagram</a>
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
