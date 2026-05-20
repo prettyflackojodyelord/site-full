@@ -422,12 +422,14 @@
     <div class="container">
 
         <header class="header">
+            <a href="main.html" alt=Главная>
             <img class="header__logo" src="https://i.imgur.com/zZQtinP.png" alt="Логотип">
+            </a>
             
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
-                    <li class="nav__item"><a class="nav__link nav__link--active" href="catalog.html">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="main.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="index.html">Каталог</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Корзина</a></li>
@@ -442,14 +444,11 @@
         </header>
 
         <main class="main">
-            <!-- Секция Каталога -->
             <section class="catalog">
                 <h1 class="catalog__title">Каталог товаров</h1>
                 
-                <!-- Добавленный Фильтр товаров -->
                 <div class="filter-section">
                     <form class="filter-form" action="#" method="get">
-                        <!-- Чекбоксы -->
                         <div class="filter-group">
                             <span class="filter-group__title">Жанры</span>
                             <label class="filter-label"><input type="checkbox" name="genre" value="classic"> Зарубежная классика</label>
@@ -458,7 +457,6 @@
                             <label class="filter-label"><input type="checkbox" name="genre" value="modern"> Современная проза</label>
                         </div>
 
-                        <!-- Радиокнопки -->
                         <div class="filter-group">
                             <span class="filter-group__title">Тип переплета</span>
                             <label class="filter-label"><input type="radio" name="cover" value="hard" checked> Твердый переплет</label>
@@ -466,7 +464,6 @@
                             <label class="filter-label"><input type="radio" name="cover" value="digital"> Электронная книга</label>
                         </div>
 
-                        <!-- Выпадающий список (Select) -->
                         <div class="filter-group">
                             <span class="filter-group__title">Сортировка</span>
                             <select class="filter-select" name="sort">
@@ -482,9 +479,9 @@
 
                 <div class="catalog__grid">
                     <article class="product-card">
-                        <div class="product-card__image-wrapper">
+                        <a class="product-card__image-wrapper" href="product.html">
                             <img class="product-card__image" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS9zsNwGqY0Aj_1_oKnpn-NFCUmsPMrP5AjsFxPSwMC_xaNOugvyxdC2yUzP9Kk4-PmZA0jdqvKyzvPAqFHS7voucOtS9jEJw" alt="Полковнику никто не пишет">
-                        </div>
+                        </a>
                         <h2 class="product-card__title">Полковнику никто не пишет</h2>
                         <p class="product-card__desc">Габриэль Гарсиа Маркес. Зарубежная классика.</p>
                         <div class="product-card__price">750 руб.</div>
@@ -583,13 +580,11 @@
                 </div>
             </section>
 
-            <!-- Добавленная Секция обратной связи -->
             <section class="feedback-section">
                 <h2 class="feedback-section__title">Обратная связь</h2>
                 <form class="feedback-form" action="#" method="post">
                     <input class="feedback-form__input" type="text" name="name" placeholder="Ваше имя" required>
                     
-                    <!-- Валидация Email -->
                     <input class="feedback-form__input" type="email" name="email" placeholder="Ваш Email" required>
                     
                     <select class="feedback-form__select" name="subject" required>

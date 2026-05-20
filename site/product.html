@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полковнику никто не пишет - Магазин Знание</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- БАЗОВЫЕ СТИЛИ --- */
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        a {
+            color: #bd2fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- ШАПКА --- */
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header__logo {
+            border-radius: 50%;
+            border: 2px solid #bd2fff;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .nav__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nav__link {
+            font-weight: bold;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .nav__link:hover, 
+        .nav__link--active { 
+            color: #fff;
+            background-color: #bd2fff;
+            border-color: #bd2fff;
+            text-decoration: none;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 5px;
+        }
+
+        .search-form__input {
+            padding: 8px 12px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .search-form__input:focus {
+            border-color: #bd2fff;
+            box-shadow: 0 0 5px rgba(189, 47, 255, 0.3);
+        }
+
+        .search-form__btn {
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-form__btn:hover {
+            background-color: #bd2fff;
+        }
+
+        /* --- СТИЛИ СТРАНИЦЫ ТОВАРА --- */
+        .product-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            background-color: #fff;
+            padding: 30px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            animation: slideFadeIn 0.6s ease-out;
+        }
+
+        @keyframes slideFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .gallery-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .main-image-box {
+            border: 2px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .main-image-box img {
+            max-width: 100%;
+            height: 400px; 
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .thumbnails img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+            padding: 5px;
+        }
+
+        .thumbnails img:hover {
+            transform: scale(1.1);
+            border-color: #bd2fff;
+        }
+
+        .info-section {
+            flex: 1.5; 
+            min-width: 300px;
+        }
+
+        .product-title {
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .price-tag {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin: 20px 0;
+            padding: 15px 25px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            border-left: 5px solid #bd2fff;
+            display: inline-block;
+        }
+
+        .specs-list {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .specs-list h3 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #bd2fff;
+            margin-bottom: 15px;
+        }
+
+        .specs-list ul {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .specs-list li {
+            font-size: 15px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 5px;
+        }
+
+        .description {
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #00b3ff;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 400px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #0088cc;
+            transform: translateY(-2px);
+        }
+
+        .delivery-info {
+            margin-top: 25px;
+            font-size: 15px;
+            color: #666;
+            border-top: 1px dashed #ccc;
+            padding-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* --- ФУТЕР --- */
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-top: 4px solid #bd2fff;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .footer__text {
+            color: #ccc;
+            margin: 5px 0;
+        }
+
+        .footer__link {
+            color: #bd2fff;
+        }
+
+        .footer__link:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .specs-list ul {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <header class="header">
+            <a href="index.html" title="Главная">
+                <img class="header__logo" src="https://i.imgur.com/zZQtinP.png" alt="Логотип">
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="main.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="index.html">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Корзина</a></li>
+                    <li class="nav__item"><a class="nav__link" href="info.html">Оплата и доставка</a></li>
+                </ul>
+            </nav>
+
+            <form class="search-form" action="search.html" method="get">
+                <input class="search-form__input" type="search" placeholder="Поиск книг..." name="s">
+                <button class="search-form__btn" type="submit">Найти</button>
+            </form>
+        </header>
+
+        <main class="main">
+            
+            <div class="product-details">
+                
+                <div class="gallery-section">
+                    <div class="main-image-box">                   
+                        <img id="mainImage" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS9zsNwGqY0Aj_1_oKnpn-NFCUmsPMrP5AjsFxPSwMC_xaNOugvyxdC2yUzP9Kk4-PmZA0jdqvKyzvPAqFHS7voucOtS9jEJw" alt="Обложка книги">
+                    </div>
+                    
+                    <!-- ДОБАВЛЕНО СВОЙСТВО ONCLICK ДЛЯ ПЕРЕКЛЮЧЕНИЯ -->
+                    <div class="thumbnails">
+                        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS9zsNwGqY0Aj_1_oKnpn-NFCUmsPMrP5AjsFxPSwMC_xaNOugvyxdC2yUzP9Kk4-PmZA0jdqvKyzvPAqFHS7voucOtS9jEJw" alt="Фото 1" onclick="document.getElementById('mainImage').src=this.src">
+                        <img src="https://cdn.litres.ru/pub/c/cover/119590.jpg" alt="Фото 2" onclick="document.getElementById('mainImage').src=this.src">
+                        <img src="https://ir.ozone.ru/s3/multimedia-o/c1000/6872227692.jpg" alt="Фото 3" onclick="document.getElementById('mainImage').src=this.src">
+                        <img src="https://akvarel.com/storage/products/iblock/4a2/kniga_markes_g_polkovniku_nikto_ne_pishet_u_0896.jpg" alt="Фото 4" onclick="document.getElementById('mainImage').src=this.src">
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h1 class="product-title">Габриэль Гарсиа Маркес. Полковнику никто не пишет</h1>
+                    
+                    <div class="rating">
+                        ★★★★☆ <span style="color: #666; font-size: 16px;">(4.2 из 5)</span>
+                    </div>
+
+                    <p class="description">
+                        В одной из стран Латинской Америки в очередной раз сменилась власть. 
+                        Герой давно минувшей гражданской войны, престарелый полковник в отставке, 
+                        влачит полунищенское существование, ожидая пенсии, которую ему так и не выплачивают. 
+                        Простая, но глубокая история о стойкости, чести и надежде в мире всеобщего равнодушия.
+                    </p>
+
+                    <div class="price-tag">750 руб.</div>
+
+                    <div class="specs-list">
+                        <h3>Характеристики:</h3>
+                        <ul>
+                            <li><strong>Автор:</strong> Габриэль Гарсиа Маркес</li>
+                            <li><strong>Издательство:</strong> АСТ</li>
+                            <li><strong>Год:</strong> 2024</li>
+                            <li><strong>Язык:</strong> Русский</li>
+                            <li><strong>Переплет:</strong> Твердый</li>
+                            <li><strong>Страниц:</strong> 128</li>
+                            <li><strong>Размер:</strong> 130x200 мм</li>
+                            <li><strong>Материал:</strong> Офсет</li>
+                        </ul>
+                    </div>
+
+                    <button class="add-to-cart-btn" onclick="alert('Товар добавлен в корзину!')">Добавить в корзину</button>
+
+                    <div class="delivery-info">
+                        <div><strong>Доставка:</strong> Курьером завтра, бесплатно от 2000 руб.</div>
+                        <div><strong>Возврат:</strong> Можно вернуть в течение 14 дней.</div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        
+        <footer class="footer">
+            <a style="font-weight: bold; color: #fff; margin-top: 0;" href="tel:88882224224">8 888 222-42-24</a>
+            <p class="footer__text">&copy; 2026, Знание. Все права защищены</p>
+            <p class="footer__text">
+                Мы в соцсетях: 
+                <a class="footer__link" href="#">VK</a> | 
+                <a class="footer__link" href="#">Telegram</a> | 
+                <a class="footer__link" href="#">Instagram</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
