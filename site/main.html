@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- БАЗОВЫЕ СТИЛИ (из вашего кода) --- */
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 16px;
@@ -35,7 +34,6 @@
             margin: 0 auto;
         }
 
-        /* --- ШАПКА --- */
         .header {
             background-color: #ffffff;
             padding: 20px;
@@ -115,7 +113,6 @@
             background-color: #bd2fff;
         }
 
-        /* --- Анимации --- */
         @keyframes slideFadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -171,8 +168,7 @@
             text-decoration: none;
             transform: translateY(-3px);
         }
-
-        /* --- СЕКЦИЯ ХИТОВ (на основе вашего каталога) --- */
+        
         .catalog {
             background-color: #fff;
             padding: 30px;
@@ -197,7 +193,6 @@
             text-align: center;
         }
 
-        /* --- СЕТКА ТОВАРОВ И КАРТОЧКА --- */
         .catalog__grid {
             display: flex;
             flex-wrap: wrap;
@@ -276,7 +271,6 @@
             background-color: #0088cc;
         }
 
-        /* --- ФУТЕР --- */
         .footer {
             margin-top: 40px;
             padding: 20px;
@@ -300,7 +294,6 @@
             color: #fff;
         }
 
-        /* --- АДАПТИВНОСТЬ --- */
         @media (max-width: 1024px) {
             .product-card { width: calc(33.333% - 13.33px); }
         }
@@ -328,15 +321,12 @@
 
 <body>
     <div class="container">
-
-        <!-- ШАПКА ИЗ ВАШЕГО КОДА -->
         <header class="header">
             <a href="main.html" alt=Главная>
             <img class="header__logo" src="https://i.imgur.com/zZQtinP.png" alt="Логотип">
             </a>
             <nav class="nav">
                 <ul class="nav__list">
-                    <!-- Класс --active перенесен на "Главную" -->
                     <li class="nav__item"><a class="nav__link nav__link--active" href="main.html">Главная</a></li>
                     <li class="nav__item"><a class="nav__link" href="index.html">Каталог</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
@@ -354,21 +344,20 @@
 
         <main class="main">
             
-            <!-- ГЛАВНЫЙ БАННЕР -->
+
             <section class="hero-banner">
                 <h1 class="hero-banner__title">Окунись в мир знаний</h1>
                 <p class="hero-banner__text">Грандиозная распродажа бестселлеров! Скидки до 40% на зарубежную и русскую классику. Найди свою любимую книгу прямо сейчас.</p>
                 <a href="index.html" class="hero-banner__btn">Перейти в каталог</a>
             </section>
 
-            <!-- БЛОК "ХИТЫ ПРОДАЖ" -->
             <section class="catalog">
                 <div class="catalog__header-wrapper">
                     <h2 class="catalog__title">Хиты продаж</h2>
                 </div>
                 
                 <div class="catalog__grid">
-                    <!-- Товар 1 -->
+
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="https://kniga.lv/cdn-cgi/image/quality=80,format=auto/img_gallery/68/1/77.jpg" alt="Мастер и Маргарита">
@@ -379,7 +368,6 @@
                         <button class="product-card__btn">В корзину</button>
                     </article>
 
-                    <!-- Товар 2 -->
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="https://kniga.lv/cdn-cgi/image/quality=80,format=auto/img_gallery/216/5/58.jpg" alt="1984">
@@ -390,7 +378,6 @@
                         <button class="product-card__btn">В корзину</button>
                     </article>
 
-                    <!-- Товар 3 -->
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="https://imo10.labirint.ru/books/482352/cover.jpg/484-0" alt="Цветы для Элджернона">
@@ -401,7 +388,7 @@
                         <button class="product-card__btn">В корзину</button>
                     </article>
 
-                    <!-- Товар 4 -->
+
                     <article class="product-card">
                         <div class="product-card__image-wrapper">
                             <img class="product-card__image" src="https://mnogoknig.com/storage/media/443528/2lxyuwg0-114jpg.jpg" alt="Преступление и наказание">
@@ -416,7 +403,6 @@
 
         </main>
 
-        <!-- ФУТЕР ИЗ ВАШЕГО КОДА -->
         <footer class="footer">
             <a style="font-weight: bold; color: #fff; margin-top: 0;" href="tel:88882224224">8 888 222-42-24</a>
             <p class="footer__text">&copy; 2026, Знание. Все права защищены</p>
