@@ -123,7 +123,7 @@
       <header class="site-header">
         <div class="container site-header__top">
           <a class="brand brand--full" href="main.html" aria-label="Знание — на главную">
-            <img class="brand__mark" src="assets/images/logo-full.png?v=3" alt="Знание — Читай. Учись. Расти." width="240" height="120">
+            <img class="brand__mark" src="assets/images/logo-light.png" alt="Знание — Читай. Учись. Расти." width="240" height="120">
           </a>
           <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
             ${link("main.html", "Главная", "home")}
@@ -151,7 +151,7 @@
     if (!root) return;
     root.innerHTML = `<footer class="site-footer">
       <div class="container site-footer__grid">
-        <div><a class="brand brand--compact" href="main.html" aria-label="Знание — на главную"><img class="brand__mark" src="assets/images/logo-full.png?v=3" alt="Знак книжного магазина «Знание»" width="260" height="130"></a><p>Книжный магазин в эстетике спокойного чтения. Статическая демонстрационная версия.</p></div>
+        <div><a class="brand brand--compact" href="main.html" aria-label="Знание — на главную"><img class="brand__mark" src="assets/images/logo-light.png" alt="Знак книжного магазина «Знание»" width="260" height="130"></a><p>Книжный магазин в эстетике спокойного чтения. Статическая демонстрационная версия.</p></div>
         <div><h2>Покупателям</h2><ul><li><a href="index.html">Каталог</a></li><li><a href="favorites.html">Избранное</a></li><li><a href="cart.html">Корзина</a></li><li><a href="info.html">Оплата и доставка</a></li></ul></div>
         <div><h2>О проекте</h2><ul><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li><li><a href="about.html#feedback">Обратная связь</a></li><li><a href="../README.md">Документация</a></li></ul></div>
         <div><h2>Связь</h2><ul><li><a href="tel:88882224224">8 888 222-42-24</a></li><li><a href="mailto:hello@example.com">hello@example.com</a></li><li><span>Социальные адреса не указаны в исходных материалах</span></li></ul></div>

@@ -320,7 +320,7 @@ h3 {
   flex: 0 0 auto;
   overflow: hidden;
   border-radius: 10px;
-  background: #f8f8f6;
+  background: transparent;
 }
 
 .brand__mark {
