@@ -128,6 +128,7 @@
           <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
             ${link("main.html", "Главная", "home")}
             ${link("index.html", "Каталог", "catalog")}
+            ${link("cards.html", "Карты", "cards")}
             ${link("about.html", "О нас", "about")}
             ${link("contacts.html", "Контакты", "contacts")}
             ${link("info.html", "Оплата и доставка", "info")}
