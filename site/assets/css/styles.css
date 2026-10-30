@@ -691,6 +691,7 @@ h3 {
   position: absolute;
   top: 10px;
   left: 10px;
+  background: rgba(21, 24, 23, 0.94);
 }
 
 .book-card__favorite {
@@ -1530,6 +1531,7 @@ dialog::backdrop {
 
 /* Баннер скидочных карт */
 .cards-banner {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
@@ -1540,10 +1542,21 @@ dialog::backdrop {
   border-radius: var(--radius-lg);
   background: var(--color-surface);
 }
+.cards-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(36, 42, 39, .94), rgba(36, 42, 39, .62)), url("../images/cards-texture.png") center / cover no-repeat;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+.cards-banner:hover::before,
+.cards-banner:focus-within::before { opacity: 1; }
 .cards-banner__copy { position: relative; z-index: 1; }
 .cards-banner__copy h2 { max-width: 620px; font-size: clamp(2rem, 4vw, 3.6rem); }
 .cards-banner__copy > p:not(.eyebrow) { max-width: 520px; margin-bottom: 24px; color: var(--color-muted); }
-.cards-banner__visual { position: relative; height: 300px; }
+.cards-banner__visual { position: relative; z-index: 1; height: 300px; }
 .cards-banner__visual img {
   position: absolute;
   top: 50%;
