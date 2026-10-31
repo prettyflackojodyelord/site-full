@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Скидочные карты книжного магазина «Знание»: сравните преимущества и выберите подходящую карту.">
+  <title>Скидочные карты — Знание</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="cards">
+  <div id="site-header"></div>
+  <main id="main-content">
+    <header class="page-hero"><div class="container">
+      <div class="breadcrumbs"><a href="main.html">Главная</a><span>·</span><span aria-current="page">Скидочные карты</span></div>
+      <p class="eyebrow">Для тех, кто любит читать</p>
+      <h1>Скидочные карты</h1>
+      <p>Выберите карту, которая подходит вам, и получайте больше преимуществ при покупке книг.</p>
+    </div></header>
+    <section class="section" aria-label="Предложения скидочных карт"><div class="container">
+      <div class="loyalty-grid">
+        <article class="loyalty-card">
+          <img class="loyalty-card__image" src="assets/images/Синяя карта.png" alt="Синяя скидочная карта «Знание»" width="1600" height="1024">
+          <h2>Синяя карта</h2>
+          <p class="loyalty-card__price">699 ₽</p>
+          <ul class="loyalty-card__benefits"><li>Скидки до 7% в розничном магазине</li><li>Персональные акции</li></ul>
+          <button class="button" type="button" data-card-choice="Синяя карта">Выбрать карту<span class="visually-hidden">: синяя</span></button>
+        </article>
+        <article class="loyalty-card">
+          <img class="loyalty-card__image" src="assets/images/Красная карта.png" alt="Красная скидочная карта «Знание»" width="1600" height="1024">
+          <h2>Красная карта</h2>
+          <p class="loyalty-card__price">1 200 ₽</p>
+          <ul class="loyalty-card__benefits"><li>Скидки до 10% в розничном магазине</li><li>Скидка 5% онлайн</li><li>Персональные акции</li></ul>
+          <button class="button" type="button" data-card-choice="Красная карта">Выбрать карту<span class="visually-hidden">: красная</span></button>
+        </article>
+        <article class="loyalty-card">
+          <img class="loyalty-card__image" src="assets/images/Черная карта.png" alt="Чёрная скидочная карта «Знание»" width="1600" height="1024">
+          <h2>Чёрная карта</h2>
+          <p class="loyalty-card__price">2 899 ₽</p>
+          <ul class="loyalty-card__benefits"><li>Скидки до 20% в розничном магазине</li><li>Скидки до 15% онлайн</li><li>Предложения 1+1, 2+2 и другие</li><li>Персональные предложения</li><li>VIP-обслуживание при возникновении вопросов</li></ul>
+          <button class="button" type="button" data-card-choice="Чёрная карта">Выбрать карту<span class="visually-hidden">: чёрная</span></button>
+        </article>
+      </div>
+      <p class="loyalty-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div></section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/api/catalog.js"></script><script src="assets/js/app.js"></script>
+  <script src="assets/js/cards.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Книжный магазин Знание — классика, фантастика и книги для вдумчивого чтения.">
+  <title>Знание — книжный магазин</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Книжный магазин с 2016 года</p>
+          <h1>Книги, которые становятся частью вашей истории.</h1>
+          <p class="hero__lead">От небольшой книжной лавки до интернет-магазина: помогаем находить классику, современную прозу и фантастику читателям по всей стране.</p>
+          <div class="hero__actions"><a class="button" href="index.html">Смотреть каталог</a><a class="button button--ghost" href="category.html?genre=russian-classics">Русская классика</a></div>
+        </div>
+        <div class="hero__visual" aria-label="Подборка книжных обложек">
+          <a class="hero-cover" href="product.html?id=master-i-margarita"><img src="assets/covers/master-i-margarita.jpg" alt="Мастер и Маргарита"></a>
+          <a class="hero-cover" href="product.html?id=1984"><img src="assets/covers/1984.jpg" alt="1984"></a>
+          <a class="hero-cover" href="product.html?id=flowers-for-algernon"><img src="assets/covers/flowers-for-algernon.jpg" alt="Цветы для Элджернона"></a>
+        </div>
+      </div>
+    </section>
+    <div class="hero-stats" aria-label="Преимущества магазина">
+      <div class="hero-stat"><strong>31 книга</strong><span>в демонстрационном каталоге</span></div>
+      <div class="hero-stat"><strong>6 направлений</strong><span>от классики до фантастики</span></div>
+      <div class="hero-stat"><strong>Бесплатно</strong><span>доставка от 2 500 ₽</span></div>
+    </div>
+    <section class="section"><div class="container">
+      <div class="cards-banner">
+        <div class="cards-banner__copy">
+          <p class="eyebrow">Больше преимуществ с «Знанием»</p>
+          <h2>Скидочная карта для ваших книжных открытий</h2>
+          <p>Три карты с персональными предложениями и скидками на книги. Выберите свою.</p>
+          <a class="button" href="cards.html">Посмотреть карты</a>
+        </div>
+        <div class="cards-banner__visual" aria-hidden="true">
+          <img src="assets/images/Синяя карта.png" alt="">
+          <img src="assets/images/Красная карта.png" alt="">
+          <img src="assets/images/Черная карта.png" alt="">
+        </div>
+      </div>
+    </div></section>
+    <section class="section"><div class="container"><div class="section-heading"><div class="section-heading__copy"><p class="eyebrow">Навигация по настроению</p><h2>Найдите свой раздел</h2><p class="muted">Шесть осмысленных подборок вместо бесконечной ленты.</p></div><a class="text-link" href="index.html">Весь каталог</a></div><div class="category-grid" data-genre-links></div></div></section>
+    <section class="section section--surface"><div class="container"><div class="section-heading"><div class="section-heading__copy"><p class="eyebrow">Чаще выбирают</p><h2>Популярные книги</h2></div><div class="rail-controls"><button class="icon-button" type="button" data-rail-target="popular-rail" data-rail-direction="prev" aria-label="Назад">←</button><button class="icon-button" type="button" data-rail-target="popular-rail" data-rail-direction="next" aria-label="Вперёд">→</button></div></div><div class="book-rail" id="popular-rail" aria-label="Популярные книги"></div></div></section>
+    <section class="section"><div class="container"><div class="promo-panel"><div class="promo-panel__copy"><p class="eyebrow eyebrow--ink">Классика, которая заставляет задуматься</p><h2>Антиутопии: истории о свободе</h2><p>От «1984» Джорджа Оруэлла до произведений Хаксли и Замятина — книги о человеке, обществе и цене свободы.</p><a class="button button--secondary" href="category.html?genre=dystopia">Открыть подборку</a></div><div class="promo-panel__art" aria-hidden="true"></div></div></div></section>
+    <section class="section section--surface"><div class="container"><div class="section-heading"><div class="section-heading__copy"><p class="eyebrow">Время перечитать</p><h2>Сначала — самые новые истории</h2><p class="muted">Подборка отсортирована по году первого издания, а не по дате печати конкретного тиража.</p></div><div class="rail-controls"><button class="icon-button" type="button" data-rail-target="new-rail" data-rail-direction="prev" aria-label="Назад">←</button><button class="icon-button" type="button" data-rail-target="new-rail" data-rail-direction="next" aria-label="Вперёд">→</button></div></div><div class="book-rail" id="new-rail" aria-label="Книги по году первого издания"></div></div></section>
+    <section class="section"><div class="container"><div class="section-heading"><div class="section-heading__copy"><p class="eyebrow">Редакторский выбор</p><h2>Четыре книги для разных вечеров</h2></div></div><div class="book-grid" id="editor-picks"></div></div></section>
+    <section class="section section--surface"><div class="container"><div class="benefits-grid"><article class="benefit-card"><div class="benefit-card__icon">✓</div><h3>Книги на любой вкус</h3><p class="muted">Классика, фантастика и современная проза — найдите историю по душе.</p></article><article class="benefit-card"><div class="benefit-card__icon">⌁</div><h3>Удобный поиск</h3><p class="muted">Выбирайте книги по жанру и цене, сохраняйте понравившиеся в избранном.</p></article><article class="benefit-card"><div class="benefit-card__icon">♧</div><h3>Знание с 2016 года</h3><p class="muted">Начав с небольшого магазина, мы создали пространство для всех, кто любит читать.</p></article></div></div></section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/api/catalog.js"></script><script src="assets/js/app.js"></script>
+</body></html>
