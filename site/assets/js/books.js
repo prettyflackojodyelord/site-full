@@ -66,6 +66,7 @@ window.BOOKS = [
   },
   {
     id: "little-prince",
+    cover: "https://covers.openlibrary.org/b/id/14491562-M.jpg",
     title: "Маленький принц",
     author: "Антуан де Сент-Экзюпери",
     genre: "world-classics",
@@ -82,6 +83,7 @@ window.BOOKS = [
   },
   {
     id: "dandelion-wine",
+    cover: "https://covers.openlibrary.org/b/id/14831327-M.jpg",
     title: "Вино из одуванчиков",
     author: "Рэй Брэдбери",
     genre: "world-classics",
@@ -144,6 +146,7 @@ window.BOOKS = [
   },
   {
     id: "fahrenheit-451",
+    cover: "https://covers.openlibrary.org/b/id/12993656-M.jpg",
     title: "451° по Фаренгейту",
     author: "Рэй Брэдбери",
     genre: "dystopia",
@@ -159,6 +162,7 @@ window.BOOKS = [
   },
   {
     id: "pride-and-prejudice",
+    cover: "https://covers.openlibrary.org/b/id/14348537-M.jpg",
     title: "Гордость и предубеждение",
     author: "Джейн Остин",
     genre: "world-classics",
@@ -174,6 +178,7 @@ window.BOOKS = [
   },
   {
     id: "great-gatsby",
+    cover: "https://covers.openlibrary.org/b/id/10590366-M.jpg",
     title: "Великий Гэтсби",
     author: "Фрэнсис Скотт Фицджеральд",
     genre: "world-classics",
@@ -189,6 +194,7 @@ window.BOOKS = [
   },
   {
     id: "catcher-in-the-rye",
+    cover: "https://covers.openlibrary.org/b/id/9273490-M.jpg",
     title: "Над пропастью во ржи",
     author: "Джером Д. Сэлинджер",
     genre: "world-classics",
@@ -204,6 +210,7 @@ window.BOOKS = [
   },
   {
     id: "brave-new-world",
+    cover: "https://covers.openlibrary.org/b/id/8231823-M.jpg",
     title: "О дивный новый мир",
     author: "Олдос Хаксли",
     genre: "dystopia",
@@ -219,6 +226,7 @@ window.BOOKS = [
   },
   {
     id: "martin-eden",
+    cover: "https://covers.openlibrary.org/b/id/9223765-M.jpg",
     title: "Мартин Иден",
     author: "Джек Лондон",
     genre: "world-classics",
@@ -234,6 +242,7 @@ window.BOOKS = [
   },
   {
     id: "to-kill-a-mockingbird",
+    cover: "https://covers.openlibrary.org/b/id/14351077-M.jpg",
     title: "Убить пересмешника",
     author: "Харпер Ли",
     genre: "world-classics",
@@ -250,6 +259,7 @@ window.BOOKS = [
   },
   {
     id: "war-and-peace",
+    cover: "https://covers.openlibrary.org/b/id/12621906-M.jpg",
     title: "Война и мир",
     author: "Лев Толстой",
     genre: "russian-classics",
@@ -265,6 +275,7 @@ window.BOOKS = [
   },
   {
     id: "anna-karenina",
+    cover: "https://covers.openlibrary.org/b/id/2560652-M.jpg",
     title: "Анна Каренина",
     author: "Лев Толстой",
     genre: "russian-classics",
@@ -280,6 +291,7 @@ window.BOOKS = [
   },
   {
     id: "the-idiot",
+    cover: "https://covers.openlibrary.org/b/id/10249475-M.jpg",
     title: "Идиот",
     author: "Фёдор Достоевский",
     genre: "russian-classics",
@@ -295,6 +307,7 @@ window.BOOKS = [
   },
   {
     id: "dead-souls",
+    cover: "https://covers.openlibrary.org/b/id/7496125-M.jpg",
     title: "Мёртвые души",
     author: "Николай Гоголь",
     genre: "russian-classics",
@@ -310,6 +323,7 @@ window.BOOKS = [
   },
   {
     id: "three-comrades",
+    cover: "https://covers.openlibrary.org/b/id/6569785-M.jpg",
     title: "Три товарища",
     author: "Эрих Мария Ремарк",
     genre: "world-classics",
@@ -325,6 +339,7 @@ window.BOOKS = [
   },
   {
     id: "all-quiet-western-front",
+    cover: "https://covers.openlibrary.org/b/id/15262512-M.jpg",
     title: "На Западном фронте без перемен",
     author: "Эрих Мария Ремарк",
     genre: "world-classics",
@@ -340,6 +355,7 @@ window.BOOKS = [
   },
   {
     id: "old-man-and-sea",
+    cover: "https://covers.openlibrary.org/b/id/463307-M.jpg",
     title: "Старик и море",
     author: "Эрнест Хемингуэй",
     genre: "world-classics",
@@ -355,6 +371,7 @@ window.BOOKS = [
   },
   {
     id: "hobbit",
+    cover: "https://covers.openlibrary.org/b/id/14627509-M.jpg",
     title: "Хоббит, или Туда и обратно",
     author: "Дж. Р. Р. Толкин",
     genre: "fantasy",
@@ -371,6 +388,7 @@ window.BOOKS = [
   },
   {
     id: "lord-of-the-rings",
+    cover: "https://covers.openlibrary.org/b/id/14625765-M.jpg",
     title: "Властелин колец",
     author: "Дж. Р. Р. Толкин",
     genre: "fantasy",
@@ -386,6 +404,7 @@ window.BOOKS = [
   },
   {
     id: "dune",
+    cover: "https://covers.openlibrary.org/b/id/11481354-M.jpg",
     title: "Дюна",
     author: "Фрэнк Герберт",
     genre: "science-fiction",
@@ -402,6 +421,7 @@ window.BOOKS = [
   },
   {
     id: "solaris",
+    cover: "https://covers.openlibrary.org/b/id/12313764-M.jpg",
     title: "Солярис",
     author: "Станислав Лем",
     genre: "science-fiction",
@@ -417,6 +437,7 @@ window.BOOKS = [
   },
   {
     id: "roadside-picnic",
+    cover: "https://covers.openlibrary.org/b/id/6752719-M.jpg",
     title: "Пикник на обочине",
     author: "Аркадий и Борис Стругацкие",
     genre: "science-fiction",
@@ -432,6 +453,7 @@ window.BOOKS = [
   },
   {
     id: "murder-orient-express",
+    cover: "https://covers.openlibrary.org/b/id/11100465-M.jpg",
     title: "Убийство в «Восточном экспрессе»",
     author: "Агата Кристи",
     genre: "detective",
@@ -447,6 +469,7 @@ window.BOOKS = [
   },
   {
     id: "name-of-the-rose",
+    cover: "https://covers.openlibrary.org/b/id/15023290-M.jpg",
     title: "Имя розы",
     author: "Умберто Эко",
     genre: "detective",
@@ -462,6 +485,7 @@ window.BOOKS = [
   },
   {
     id: "we",
+    cover: "https://covers.openlibrary.org/b/id/5484189-M.jpg",
     title: "Мы",
     author: "Евгений Замятин",
     genre: "dystopia",
