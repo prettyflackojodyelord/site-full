@@ -1588,3 +1588,25 @@ dialog::backdrop {
   .cards-banner__visual img:nth-child(2) { transform: translate(-50%, -50%); }
   .cards-banner__visual img:nth-child(3) { transform: translate(-27%, -22%) rotate(16deg); }
 }
+
+/* Компактный каталог и сравнение карт на телефоне. */
+@media (max-width: 600px) {
+  #catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  #catalog-grid > .empty-state { grid-column: 1 / -1; }
+  #catalog-grid .book-card { padding: 9px; }
+  #catalog-grid .book-card__media { margin-bottom: 10px; }
+  #catalog-grid .book-card__badge { top: 6px; left: 6px; max-width: calc(100% - 40px); font-size: .65rem; line-height: 1.2; }
+  #catalog-grid .book-card__favorite { top: 6px; right: 6px; width: 34px; height: 34px; }
+  #catalog-grid .book-card__meta { flex-wrap: wrap; gap: 4px; font-size: .72rem; }
+  #catalog-grid .book-card__title { font-size: 1.05rem; overflow-wrap: anywhere; }
+  #catalog-grid .book-card__author { font-size: .8rem; }
+  #catalog-grid .book-card__footer { align-items: stretch; flex-direction: column; gap: 8px; }
+  #catalog-grid .book-card__footer .button { width: 100%; padding-inline: 6px; }
+  .loyalty-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .loyalty-card { padding: 12px; }
+  .loyalty-card__image { height: auto; aspect-ratio: 1.5; margin-bottom: 12px; }
+  .loyalty-card h2 { font-size: 1.2rem; overflow-wrap: anywhere; }
+  .loyalty-card__price { font-size: 1.1rem; margin-bottom: 14px; }
+  .loyalty-card__benefits { padding-left: 17px; margin-bottom: 20px; font-size: .85rem; overflow-wrap: anywhere; }
+  .loyalty-card .button { padding-inline: 8px; font-size: .85rem; }
+}
