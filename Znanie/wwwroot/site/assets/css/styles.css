@@ -1658,10 +1658,10 @@ dialog::backdrop {
 }
 
 @font-face {
-  font-family: "Arteks Black";
-  src: url("../fonts/arteks-black.otf") format("opentype");
+  font-family: "Arteks Regular";
+  src: url("../fonts/arteks-regular.otf") format("opentype");
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   font-display: swap;
 }
-.mobile-nav__link { font-family: "Arteks Black", sans-serif; font-weight: 900; }
+.mobile-nav__link { font-family: "Arteks Regular", sans-serif; font-weight: 400; }
