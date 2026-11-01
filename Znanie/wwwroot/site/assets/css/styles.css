@@ -1665,3 +1665,16 @@ dialog::backdrop {
   font-display: swap;
 }
 .mobile-nav__link { font-family: "Arteks Regular", sans-serif; font-weight: 400; }
+
+/* Три скидочные карты рядом, в том числе на узком экране. */
+@media (max-width: 900px) {
+  .loyalty-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .loyalty-grid { gap: 7px; }
+  .loyalty-card { padding: 8px; }
+  .loyalty-card h2 { font-size: clamp(.86rem, 3.4vw, 1.1rem); line-height: 1.2; }
+  .loyalty-card__price { font-size: .95rem; }
+  .loyalty-card__benefits { padding-left: 13px; font-size: .75rem; line-height: 1.4; }
+  .loyalty-card .button { padding: 8px 3px; font-size: .72rem; line-height: 1.2; white-space: normal; }
+}
