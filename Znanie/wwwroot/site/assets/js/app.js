@@ -150,10 +150,6 @@
         </div>
         <nav class="mobile-pages" aria-label="Страницы сайта">
           ${link("main.html", "Главная", "home")}
-          ${link("index.html", "Каталог", "catalog")}
-          ${link("cards.html", "Карты", "cards")}
-          ${link("favorites.html", "Избранное", "favorites")}
-          ${link("cart.html", "Корзина", "cart")}
           ${link("about.html", "О нас", "about")}
           ${link("contacts.html", "Контакты", "contacts")}
           ${link("info.html", "Оплата и доставка", "info")}
