@@ -1689,18 +1689,22 @@ dialog::backdrop {
     overflow-x: auto;
     overscroll-behavior-x: contain;
     padding: 5px 11px;
-    background: #4a4c4a;
-    scrollbar-width: thin;
-    scrollbar-color: #a1a5a0 transparent;
+    background: transparent;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
+  .mobile-pages::-webkit-scrollbar { display: none; }
   .mobile-pages .site-nav__link {
     flex: 0 0 auto;
+    padding: 5px 8px;
     white-space: nowrap;
-    color: #f4f1d8;
-    font-size: .85rem;
+    background: transparent;
+    color: #a5aaa3;
+    font-size: .73rem;
   }
+  .mobile-pages .site-nav__link:hover,
   .mobile-pages .site-nav__link[aria-current="page"] {
-    background: #303531;
-    color: var(--color-accent-strong);
+    background: transparent;
+    color: #c1c5bf;
   }
 }
