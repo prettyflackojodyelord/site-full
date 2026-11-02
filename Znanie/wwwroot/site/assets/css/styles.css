@@ -1744,3 +1744,5 @@ dialog::backdrop {
   }
   .back-to-top:hover { background: var(--color-surface-2); color: var(--color-accent-strong); }
 }
+
+.header-action svg { width: 22px; height: 22px; }

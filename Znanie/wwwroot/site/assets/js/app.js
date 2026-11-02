@@ -123,6 +123,7 @@
     const activeMobile = file === "favorites.html" ? "favorites" : file === "cart.html" || file === "checkout.html" ? "cart" : file === "cards.html" ? "cards" : ["index.html", "category.html", "product.html", "search.html"].includes(file) ? "catalog" : "";
     const mobileLink = (href, label, page, icon, counter = "") => `<a class="mobile-nav__link" href="${href}" ${activeMobile === page ? 'aria-current="page"' : ""}><span class="mobile-nav__icon">${icon}${counter}</span><span>${label}</span></a>`;
     const svg = (content) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${content}</svg>`;
+    const basketIcon = svg('<path d="M3 10h18l-1.5 9a2 2 0 0 1-2 1.7h-11a2 2 0 0 1-2-1.7L3 10z"/><path d="M8 10l4-7 4 7M9 14v3M15 14v3"/>');
     root.innerHTML = `<a class="skip-link" href="#main-content">К содержанию</a>
       <header class="site-header">
         <div class="container site-header__top">
@@ -144,7 +145,7 @@
           </form>
           <div class="header-actions">
             <a class="header-action" href="favorites.html" aria-label="Избранное">♡<span class="header-action__count" data-favorites-count>0</span></a>
-            <a class="header-action" href="cart.html" aria-label="Корзина">▢<span class="header-action__count" data-cart-count>0</span></a>
+            <a class="header-action" href="cart.html" aria-label="Корзина">${basketIcon}<span class="header-action__count" data-cart-count>0</span></a>
             <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню">☰</button>
           </div>
         </div>
@@ -158,7 +159,7 @@
       <nav class="mobile-nav" aria-label="Мобильная навигация">
         ${mobileLink("index.html", "Каталог", "catalog", svg('<path d="M4 5a2 2 0 0 1 2-2h14v17H6a2 2 0 0 1-2-2z"/><path d="M4 17a2 2 0 0 1 2-2h14M8 7h8"/>'))}
         ${mobileLink("favorites.html", "Избранное", "favorites", svg('<path d="M20.8 4.9a5.5 5.5 0 0 0-7.8 0L12 6l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.3a5.5 5.5 0 0 0 0-7.8z"/>'), '<span class="mobile-nav__count" data-favorites-count aria-hidden="true">0</span>')}
-        ${mobileLink("cart.html", "Корзина", "cart", svg('<path d="M5 8h14l1 13H4L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>'), '<span class="mobile-nav__count" data-cart-count aria-hidden="true">0</span>')}
+        ${mobileLink("cart.html", "Корзина", "cart", basketIcon, '<span class="mobile-nav__count" data-cart-count aria-hidden="true">0</span>')}
         ${mobileLink("cards.html", "Карты", "cards", svg('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 15h4"/>'))}
       </nav>
       <a class="back-to-top" href="#site-header" aria-label="Вернуться наверх" hidden>↑</a>`;
