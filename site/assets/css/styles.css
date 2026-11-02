@@ -1721,3 +1721,26 @@ dialog::backdrop {
   .site-footer__grid > :first-child, .site-footer__grid > :last-child { grid-column: 1 / -1; }
   .site-footer__grid > * { min-width: 0; overflow-wrap: anywhere; }
 }
+
+/* Кнопка возвращения к началу страницы на компьютере. */
+.back-to-top { display: none; }
+@media (min-width: 821px) {
+  .back-to-top:not([hidden]) {
+    position: fixed;
+    z-index: 90;
+    bottom: 24px;
+    left: 24px;
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    background: var(--color-surface);
+    color: var(--color-cream);
+    box-shadow: var(--shadow-card);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .back-to-top:hover { background: var(--color-surface-2); color: var(--color-accent-strong); }
+}

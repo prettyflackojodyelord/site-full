@@ -160,7 +160,16 @@
         ${mobileLink("favorites.html", "Избранное", "favorites", svg('<path d="M20.8 4.9a5.5 5.5 0 0 0-7.8 0L12 6l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.3a5.5 5.5 0 0 0 0-7.8z"/>'), '<span class="mobile-nav__count" data-favorites-count aria-hidden="true">0</span>')}
         ${mobileLink("cart.html", "Корзина", "cart", svg('<path d="M5 8h14l1 13H4L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>'), '<span class="mobile-nav__count" data-cart-count aria-hidden="true">0</span>')}
         ${mobileLink("cards.html", "Карты", "cards", svg('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 15h4"/>'))}
-      </nav>`;
+      </nav>
+      <a class="back-to-top" href="#site-header" aria-label="Вернуться наверх" hidden>↑</a>`;
+  }
+
+  function initBackToTop() {
+    const link = $(".back-to-top");
+    if (!link) return;
+    const update = () => { link.hidden = window.scrollY < 400; };
+    window.addEventListener("scroll", update, { passive: true });
+    update();
   }
 
   function renderFooter() {
@@ -523,6 +532,7 @@
 
   function init() {
     renderHeader();
+    initBackToTop();
     renderFooter();
     bindGlobalActions();
     updateCounters();
