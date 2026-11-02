@@ -148,6 +148,16 @@
             <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню">☰</button>
           </div>
         </div>
+        <nav class="mobile-pages" aria-label="Страницы сайта">
+          ${link("main.html", "Главная", "home")}
+          ${link("index.html", "Каталог", "catalog")}
+          ${link("cards.html", "Карты", "cards")}
+          ${link("favorites.html", "Избранное", "favorites")}
+          ${link("cart.html", "Корзина", "cart")}
+          ${link("about.html", "О нас", "about")}
+          ${link("contacts.html", "Контакты", "contacts")}
+          ${link("info.html", "Оплата и доставка", "info")}
+        </nav>
       </header>
       <nav class="mobile-nav" aria-label="Мобильная навигация">
         ${mobileLink("index.html", "Каталог", "catalog", svg('<path d="M4 5a2 2 0 0 1 2-2h14v17H6a2 2 0 0 1-2-2z"/><path d="M4 17a2 2 0 0 1 2-2h14M8 7h8"/>'))}
