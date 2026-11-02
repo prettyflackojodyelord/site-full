@@ -1708,3 +1708,16 @@ dialog::backdrop {
     color: #c1c5bf;
   }
 }
+
+/* Поиск в мобильной шапке и две колонки ссылок в подвале. */
+@media (max-width: 820px) {
+  .site-header__top { gap: 10px; }
+  .header-search { display: block; flex: 1 1 0; min-width: 0; max-width: 360px; }
+  .header-search input { min-width: 0; min-height: 38px; padding: 8px 37px 8px 12px; border-color: transparent; background: #343735; font-size: .82rem; }
+  .header-search button { top: 2px; right: 2px; }
+}
+@media (max-width: 560px) {
+  .site-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 18px; }
+  .site-footer__grid > :first-child, .site-footer__grid > :last-child { grid-column: 1 / -1; }
+  .site-footer__grid > * { min-width: 0; overflow-wrap: anywhere; }
+}
