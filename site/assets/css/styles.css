@@ -1746,3 +1746,9 @@ dialog::backdrop {
 }
 
 .header-action svg { width: 22px; height: 22px; }
+
+/* Размер сердечка внутри круглых кнопок избранного. */
+.book-card__favorite, .header-action[href="favorites.html"] {
+  font-size: 1.4rem;
+  line-height: 1;
+}
